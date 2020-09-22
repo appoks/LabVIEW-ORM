@@ -39,16 +39,13 @@ Check the bitness of the driver you will use: For LabVIEW 32bits, use the respec
 	- Click on `New....`
 	- You can choose to create the DSN either to your user or to all users of this machine.[^1] Select the desider option.
 	- Now you'll choose the PostgreSQL Driver you installed in the second step. Select `PostgreSQL ODBC Driver(XXX)`and click `Next...`.
-		- If you installed both 32 and 64bits, move the horizontal scrollbar until you see driver name. x32 drivers will be identified as 
 	- Configure the name you want to show and use when referencing to the DSN. For this example, we'll create a Data Source called LV-ORM-DSN.
-	
-<p align="center">
-	<img src="./.gitlab/DSN-ConnectionString.PNG" alt="Building a DSN with UDL File." width="100%" max-width="400px">
-</p>
-
-
 	- You can also select the database you want to use or leave it blank and specify later. PostgreSQL's default database is named *postgres*. For now, we'll use this one.
 	- Click `Save`.
+	
+<p align="center">
+	<img src="./.gitlab/DSN-ConnectionString.PNG" alt="Building a DSN with UDL File." width="100%" max-width="200px">
+</p>
 
 5. If you want, explore your new database by opening pgAdmin4.
 
@@ -69,6 +66,8 @@ To run the supplied demo, open the LabVIEW Project ( version >= 2018 ).
 <img src="./.gitlab/Run-and-Create-1st-Record.PNG" alt="Running the application and checking your first object." width="100%">
 </p>
 
-	_____
+
+_____
+
 
 [^1]: Creating an user DataSource will prevent you to run the final executable with a different user than the one that configured the machine. For deployment, you probably should create a system-wide DSN. To create a system DSN, open the file with administrative privileges.  
