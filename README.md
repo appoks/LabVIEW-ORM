@@ -1,12 +1,16 @@
 # LabVIEW ORM Library - version 1
 
 LabVIEW ORM Library is a implementation that aims to provide LabVIEW developers with a simple tool capable of abstracting the SQL operations.
-You can read about this project in my [LabVIEW OverEngineering Blog](https://medium.com/labview-overengineering)
+You can read about this project in my [LabVIEW OverEngineering Blog](https://medium.com/labview-overengineering).
+
+This library uses PostgreSQL as database. Future versions of this tool may - or may not - provide the code needed to interface with other databases.
 
 _____ 
 
+
 #### THIS IS A DRAFT!
 And most important, this is a Work In Progress. Things WILL break and I'm sure the final version will differ a lot from this first draft. Also, the first version of this library is just a Proof Of Concept.  Do not expect this to be supported or even to work with different data setups.
+
 
 _____
 
@@ -15,10 +19,10 @@ _____
 ## How to install? 
 
 
-1. Download and Install [PostgreSQL](https://www.postgresql.org/download/windows/). It'll also instal pgAdmin - a Web Interface for managing postgresql servers and databases.
+1. Download and Install [PostgreSQL](https://www.postgresql.org/download/windows/). It'll also instal pgAdmin - a Web Interface for managing postgresql servers and databases and StackBuilder.
 
-2. Install Windows Drivers for PGSQL using StackBuilder, or Download it directly from [Software Catalogue](https://www.postgresql.org/download/products/2-drivers-and-interfaces/).
-Check the bitness of the driver you will use: For LabVIEW 32bits, use the respective bitness ODBC driver - PostgreSQL ODBC for 32 bits. If unsure, install both 32 and 64 bits and the system will handle which driver to use ( mostly...)
+2. Install Windows ODBC Drivers for PGSQL using StackBuilder, or Download it directly from [Software Catalogue](https://www.postgresql.org/download/products/2-drivers-and-interfaces/).
+Check the bitness of the driver you will use: For LabVIEW 32bits, use the respective bitness ODBC driver - PostgreSQL ODBC for 32 bits. If unsure, install both 32 and 64 bits and the system will handle which driver to use ( mostly... )
 
 3. Create or edit user and password if you want. 
 
@@ -29,19 +33,22 @@ Check the bitness of the driver you will use: For LabVIEW 32bits, use the respec
 	a. Open the UDL file. 
 	a. At the first tab, Provider, select ***Microsoft OLE DB Provider for ODBC Drivers***;
 	b. At the second tab, Connection, follow the procedure:
-	- > Select `Use a Connection Chain`;
-	- > Click on `Create...`;
-	- > Select the `Machine Data Sources` tab;
-	- > Click on `New....`
-	- > You can choose to create the DSN either to your user or to all users of this machine.[^1] Select the desider option.
-	- > Now you'll choose the PostgreSQL Driver you installed in the second step. Select `PostgreSQL ODBC Driver(XXX)`and click `Next...`.
+	- Select `Use a Connection Chain`;
+	- Click on `Create...`;
+	- Select the `Machine Data Sources` tab;
+	- Click on `New....`
+	- You can choose to create the DSN either to your user or to all users of this machine.[^1] Select the desider option.
+	- Now you'll choose the PostgreSQL Driver you installed in the second step. Select `PostgreSQL ODBC Driver(XXX)`and click `Next...`.
 		- If you installed both 32 and 64bits, move the horizontal scrollbar until you see driver name. x32 drivers will be identified as 
-	- > Now, configure the name you want to show and use when referencing to the DSN. For this example, we'll create a Data Source called LV-ORM-DSN.
+	- Configure the name you want to show and use when referencing to the DSN. For this example, we'll create a Data Source called LV-ORM-DSN.
 	
-	<img src="./.gitlab/DSN-ConnectionString.PNG" alt="Building a DSN with UDL File.">
+<p align="center">
+	<img src="./.gitlab/DSN-ConnectionString.PNG" alt="Building a DSN with UDL File." width="100%" max-width="400px">
+</p>
 
-	- > You can also select the database you want to use or leave it blank and specify later. PostgreSQL's default database is named *postgres*. For now, we'll use this one.
-	- > Click `Save`.
+
+	- You can also select the database you want to use or leave it blank and specify later. PostgreSQL's default database is named *postgres*. For now, we'll use this one.
+	- Click `Save`.
 
 5. If you want, explore your new database by opening pgAdmin4.
 
@@ -58,8 +65,9 @@ To run the supplied demo, open the LabVIEW Project ( version >= 2018 ).
 6. Save your object and navigate.
 7. If you want to see your object stored into the database, open the pgAdmin.
 
-	<img src="./.gitlab/Run-and-Create-1st-Record" alt="Running the application and checking your first object.">
-
+<p align="center">
+<img src="./.gitlab/Run-and-Create-1st-Record.PNG" alt="Running the application and checking your first object." width="100%">
+</p>
 
 	_____
 
