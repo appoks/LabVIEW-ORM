@@ -44,7 +44,7 @@ Check the bitness of the driver you will use: For LabVIEW 32bits, use the respec
 	- Click `Save`.
 	
 <p align="center">
-	<img src="./.gitlab/DSN-ConnectionString.PNG" alt="Building a DSN with UDL File." width="100%" max-width="200px">
+	<img src="./.gitlab/DSN-ConnectionString.PNG" alt="Building a DSN with UDL File.">
 </p>
 
 5. If you want, explore your new database by opening pgAdmin4.
