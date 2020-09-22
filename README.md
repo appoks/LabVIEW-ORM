@@ -38,7 +38,7 @@ Check the bitness of the driver you will use: For LabVIEW 32bits, use the respec
 		- If you installed both 32 and 64bits, move the horizontal scrollbar until you see driver name. x32 drivers will be identified as 
 	- > Now, configure the name you want to show and use when referencing to the DSN. For this example, we'll create a Data Source called LV-ORM-DSN.
 	
-	<img src="./github/DSN-ConnectionString.PNG" alt="Building a DSN with UDL File.">
+	<img src="./gitlab/DSN-ConnectionString.PNG" alt="Building a DSN with UDL File.">
 
 	- > You can also select the database you want to use or leave it blank and specify later. PostgreSQL's default database is named *postgres*. For now, we'll use this one.
 	- > Click `Save`.
@@ -58,7 +58,7 @@ To run the supplied demo, open the LabVIEW Project ( version >= 2018 ).
 6. Save your object and navigate.
 7. If you want to see your object stored into the database, open the pgAdmin.
 
-	<img src="./github/Run-and-Create-1st-Record" alt="Running the application and checking your first object.">
+	<img src="./gitlab/Run-and-Create-1st-Record" alt="Running the application and checking your first object.">
 
 
 	_____
